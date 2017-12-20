@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Rankings</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <!-- <script src="js/jquery-1.10.2.min.js"></script>   -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/hammer.min.js"></script>
+  <script src="js/custom-mobile.js"></script>
+  
+ </head>
+ <body>
+  <section class="ranking-wrapper" ng-app="rank-app" ng-controller="ranking-controller" ng-cloak>
+		<aside class="RankBgColor">
+			<ul class="legends">
+				  <li> 
+					 <img border="0" src="images/color1.jpg" alt="" style="margin-right: 3px;">高</li>
+				  <li> 
+					 <img border="0" src="images/color2.jpg" alt="" style="margin-right: 3px;">中高</li>
+				  <li> 
+					 <img border="0" src="images/color3.jpg" alt="" style="margin-right: 3px;">中</li>
+				  <li> 
+					 <img border="0" src="images/color4.jpg" alt="" style="margin-right: 3px;">中低</li>
+				  <li style="padding-right: 0px;"> 
+					 <img border="0" src="images/color5.jpg" alt="" style="margin-right: 3px;">低</li>
+			   </ul>
+		</aside>
+		<section class="ranking-table-content">
+				<section class="cityTable">
+					<table border="0" cellpadding="0" cellspacing="0" ng-init="readCSV()">
+						<tr>
+							<th hm-tap="sortData('Rank')" ng-class="{tabActive:activecolumn == 'Rank'}">2016年<br />総合ランキング<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Rank')"></i></th>
+							<th hm-tap="sortData('Market')" ng-class="{tabActive:activecolumn == 'Market'}">市場<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Market')"></i></th>
+							<th hm-tap="sortData('Region')" ng-class="{tabActive:activecolumn == 'Region'}">地域<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Region')"></i></th>
+							<th hm-tap="sortData('Investment_Performance')" ng-class="{tabActive:activecolumn == 'Investment_Performance'}">パフォーマンス <br /> 測定<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Investment_Performance')"></i></th>
+							<th hm-tap="sortData('Market_Fundamentals')" ng-class="{tabActive:activecolumn == 'Market_Fundamentals'}"> 市場ファンダ <br /> メンタルズ<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Market_Fundamentals')"></i></th>
+							<th hm-tap="sortData('Listed_Vehicles')" ng-class="{tabActive:activecolumn == 'Listed_Vehicles'}">上場法人<br />のガバナンス<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Listed_Vehicles')"></i></th>
+							<th hm-tap="sortData('Regulatory_and_Legal')" ng-class="{tabActive:activecolumn == 'Regulatory_and_Legal'}">法律・規制<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Regulatory_and_Legal')"></i></th>
+							<th hm-tap="sortData('Transaction_Process')" ng-class="{tabActive:activecolumn == 'Transaction_Process'}">取引 <br /> プロセス<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Transaction_Process')"></i></th>
+							<th hm-tap="sortData('Composite_Score')" ng-class="{tabActive:activecolumn == 'Composite_Score'}">2016年<br /> 総合スコア<br style="clear:both;" /><i class="glyphicon" ng-class="setIcon('Composite_Score')"></i></th>
+						</tr>
+
+						<tr ng-repeat="rdata in rankData" ng-class="{colorhigh:rdata.Rank < 11,colortransparent:rdata.Rank >= 11 && rdata.Rank < 31,colorsemi:rdata.Rank >= 31 && rdata.Rank < 68,colorlow:rdata.Rank >= 68 && rdata.Rank < 89,coloropaque:rdata.Rank >= 89}"  class="rdata">
+							  <td align="center" width="100">{{ rdata.Rank }}</td>
+							  <td width="120">{{ rdata.Market }}</td>
+							 <td width="120">{{ rdata.Region}}</td>
+							 <td align="center" width="100">{{ rdata.Investment_Performance}}</td>
+							 <td align="center" width="80">{{ rdata.Market_Fundamentals}}</td>
+							 <td align="center" width="80">{{ rdata.Listed_Vehicles}}</td>
+							 <td align="center" width="80">{{ rdata.Regulatory_and_Legal}}</td>
+							 <td align="center" width="80">{{ rdata.Transaction_Process}}</td>
+							 <td align="center" width="80">{{ rdata.Composite_Score}}</td>
+						</tr>
+					</table>
+				</section>
+				
+		</section>
+
+    </section>
+
+ </body>
+</html>
