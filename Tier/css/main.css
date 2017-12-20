@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.main-chart-container {
+  position: relative;
+  margin: 14px auto 0px auto;
+  width: 980px;
+  min-height: 1468px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;max-height: 1468px;
+    overflow: hidden; }
+
+.main-chart-container .fallback {
+  position: absolute;
+  top: 200px;
+  left: 350px;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  border: 1px solid #ddd;
+  text-align: center; }
+
+.title-box {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px; }
+
+/* tooltip */
+.tooltip {
+  background-color: white;
+  width: 350px;
+  padding: 20px;
+  font-size: 14px;
+  opacity: 0;
+  border: 1px solid #ddd;
+  -pie-box-shadow: 0px 0px 12px 3px #B2B2B2;
+  -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.3);
+  border-style: none;
+  border-color: transparent;
+  background-color: #FFFFFF;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  pointer-events: none; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  /*width: 1200px;*/
+  margin: 0 auto;
+  font-size: 14px; }
+
+#transparency-bubbles {
+  /* search button */
+  /* tooltip */ }
+  #transparency-bubbles em {
+    font-weight: bold; }
+  #transparency-bubbles .top-menu .item {
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    padding: 17px 0;
+    background-color: #2E75C1;
+    cursor: pointer;
+    color: white;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    #transparency-bubbles .top-menu .item.selected {
+      background-color: #D5E3F3;
+      color: #3E5660; }
+  #transparency-bubbles .top-menu .item:first-child {
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -ms-border-top-left-radius: 10px;
+    border-top-left-radius: 10px; }
+  #transparency-bubbles .top-menu .item:last-child {
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -ms-border-top-right-radius: 10px;
+    border-top-right-radius: 10px; }
+  #transparency-bubbles .description {
+    height: 100px;
+    padding: 30px;
+    background-color: #D5E3F3; }
+    #transparency-bubbles .description .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 5px; }
+    #transparency-bubbles .description .copy {
+      font-size: 15px;
+      line-height: 22px;
+      display: none; }
+      #transparency-bubbles .description .copy div {
+        margin-bottom: 10px; }
+      #transparency-bubbles .description .copy.active {
+        display: block; }
+  #transparency-bubbles .wave-background {
+    position: absolute;
+    z-index: -10;
+    background-color: #D5E3F3; }
+  #transparency-bubbles .search.button {
+    position: absolute;
+    width: 170px;
+    right: 25px;
+    top: 268px; }
+    #transparency-bubbles .search.button input {
+      padding: 7px;
+      width: 156px;
+      border: none;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      border-radius: 6px; }
+    #transparency-bubbles .search.button .tt-suggestion {
+      padding: 5px; }
+    #transparency-bubbles .search.button .tt-dropdown-menu {
+      background-color: white;
+      border: 1px solid #eee; }
+    #transparency-bubbles .search.button .tt-is-under-cursor {
+      background-color: #2E75C1;
+      color: white; }
+    #transparency-bubbles .search.button .icon {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 4px;
+      left: 146px;
+      cursor: default; }
+  #transparency-bubbles .region-menu {
+    margin-top: 120px; }
+    #transparency-bubbles .region-menu .item {
+      cursor: pointer;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      #transparency-bubbles .region-menu .item .background {
+        fill: #245281; }
+      #transparency-bubbles .region-menu .item circle {
+        fill: white; }
+      #transparency-bubbles .region-menu .item text {
+        fill: white;
+        text-anchor: middle;
+        font-size: 14px;
+        font-weight: bold; }
+  #transparency-bubbles .chart-container {
+    position: relative;
+    width: 560px;
+    margin-top: 50px;
+    margin-left: 30px; }
+    #transparency-bubbles .chart-container svg .chart .countries circle.selected {
+      stroke: white;
+      stroke-width: 4; }
+    #transparency-bubbles .chart-container svg .chart .countries circle.hovered {
+      stroke: white;
+      stroke-width: 4; }
+    #transparency-bubbles .chart-container svg .chart .bands line {
+      stroke: white; }
+    #transparency-bubbles .chart-container svg .chart .bands text {
+      fill: white;
+      font-size: 15px;
+      text-anchor: middle;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default; }
+    #transparency-bubbles .chart-container svg .chart .bands .text-border {
+      fill: none;
+      stroke: white; }
+    #transparency-bubbles .chart-container svg .chart .bands .info-icon {
+      fill: white; }
+    #transparency-bubbles .chart-container .band-copy {
+      position: absolute;
+      top: 0; }
+      #transparency-bubbles .chart-container .band-copy .band {
+        opacity: 0;
+        display: none;
+        width: 700px;
+        font-size: 20px;
+        padding: 20px 110px;
+        text-align: center;
+        position: absolute;
+        background-color: white; }
+        #transparency-bubbles .chart-container .band-copy .band h3 {
+          color: #D40915;
+          margin-bottom: 8px;
+          font-size: 24px;
+          font-weight: bold; }
+        #transparency-bubbles .chart-container .band-copy .band .copy {
+          position: absolute;
+          width: 700px;
+          font-size: 18px;
+          line-height: 24px; }
+  #transparency-bubbles .tooltip {
+    z-index: 10;
+    position: absolute;
+    font-size: 15px;
+    width: 280px; }
+    #transparency-bubbles .tooltip div {
+      margin-bottom: 10px; }
+    #transparency-bubbles .tooltip .name {
+      color: #D40915;
+      text-align: center;
+      font-weight: bold; }
+    #transparency-bubbles .tooltip .transparency-category {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 15px; }
+    #transparency-bubbles .tooltip .transparency-rank .value, #transparency-bubbles .tooltip .real-estate-market-size .value {
+      font-weight: bold;
+      position: absolute;
+      right: 20px; }
+    #transparency-bubbles .tooltip .more {
+      margin-top: 20px;
+      line-height: 20px; }
+
+/*# sourceMappingURL=main.css.map */
