@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlusÂ®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Residential Stamp Duty Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="scripts/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/calculator.js"></script>
+ </head>
+ <body>
+
+ <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PRH56P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PRH56P');</script>
+<!-- End Google Tag Manager -->
+
+<div class="main_container">
+		<div class="rsdlt">
+				<h1>RESIDENTIAL STAMP DUTY CALCULATOR</h1>
+				<div class="rsdlt_calculator">
+
+					  <div class="form-elements">
+							<div class="form-lbl lbl-width">
+								 <label>Enter price of property</label>
+							</div>
+							<div class="form-value">
+								 <p><input id="price" name="price" type="text" value="" placeholder="Please enter the price of the property you wish to calculate"></p>
+								 <p class="pro-radio pro-chekbox">
+								<input name="non-primary" id="non-primary" type="checkbox" value=""><label for="non-primary"><span><span></span></span>Property is a non-primary residence (This property will not be my main residence and will therefore incur the 3% additional stamp duty)</label></p>
+							</div>
+					  </div>
+
+					   <div class="form-elements" style="border-bottom:1px solid #e5e5e5;">
+							<div class="submitBtn mobile-button"><button type="button" class="calculateRSDLT">CALCULATE STAMP DUTY</button></div>
+							<div class="ResetBtn"><button type="button" class="ResetRSDLT">RESET CALCULATOR</button></div>
+							<div class="submitBtn desktop-button"><button type="button" class="calculateRSDLT">CALCULATE STAMP DUTY</button></div>
+					  </div>
+
+					  <div class="result-wrap">
+							<h2>RESULTS</h2>
+
+							<div class="result-value">
+									<div class="result-amount">
+										<p>Amount of Stamp Duty </p>
+										<div class="result-pay"></div>
+									</div>
+
+									<div class="result-rate">
+										<p>% of Stamp Duty</p>
+										<div class="result-tax"></div>
+									</div>
+							</div>
+
+							<div class="calculate-table">
+								<table cellpadding="0" cellspacing="0" border="0" width="100%">
+									<tr class="oddBg">
+										<th>Brackets</th>
+										<th align="center">Standard rate</th>
+										<th align="center">Buy to let/second home rate (April 2016)</th>
+									</tr>
+									<tr class="evenBg">
+										<td>Up to &pound;125,000</td>
+										<td align="center">0%</td>
+										<td align="center">3%</td>
+									</tr>
+									<tr class="oddBg">
+										<td>&pound;125,001 - &pound;250,000</td>
+										<td align="center">2%</td>
+										<td align="center">5%</td>
+									</tr>
+									<tr class="evenBg">
+										<td>&pound;250,001 - &pound;925,000</td>
+										<td align="center">5%</td>
+										<td align="center">8%</td>
+									</tr>
+									<tr class="oddBg">
+										<td>&pound;925,001 - &pound;1.5m</td>
+										<td align="center">10%</td>
+										<td align="center">13%</td>
+									</tr>
+									<tr class="evenBg">
+										<td>Over &pound;1.5m</td>
+										<td align="center">12%</td>
+										<td align="center">15%</td>
+									</tr>
+									<tr class="oddBg">
+										<td colspan="3">Source: HMRC</td>
+									</tr>
+								</table>
+
+							</div>
+
+							
+
+						</div>
+
+
+				</div>  <!-- rsdlt calculator -->
+		</div><!-- rsdlt -->
+</div><!-- main container -->
+ </body>
+</html>
